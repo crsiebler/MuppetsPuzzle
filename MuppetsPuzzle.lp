@@ -11,10 +11,10 @@
 muppet(kermit; piggy; fozzie).
 
 % The Three method of Transportation
-transport(bus; bike; car).
+transport(bus, bike, car).
 
 % The Three Amusement Parks
-park(disney; marine; magic).
+park(disney, marine, magic).
 
 %---------------------------------%
 % Define the Rules for the Puzzle %
@@ -37,10 +37,13 @@ park(disney; marine; magic).
 :- visited(kermit, disney).
 
 % The Muppet that went to Marine World did not ride a bike
-:- muppet(X), visited(X, marine), not rode(X, bike).
+:- muppet(X), visited(X,marine), not rode(X,bike).
 
 % Miss Piggy went in a car
-:- rode(piggy, car).
+:- rode(piggy,car).
 
 % Fozzie Bear did not ride the bus
-:- not rode(fozzie, bus).
+:- not rode(fozzie,bus).
+
+% Only one Muppet went to Magic Mountain
+1 { visited(X,magic) : muppet(X) } 1 := park(magic).
