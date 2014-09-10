@@ -47,8 +47,8 @@ park(disney; marine; magic).
 % Only one Muppet went to Magic Mountain
 1 { visited(X,magic) : muppet(X) } 1 :- park(magic).
 
-%-----------------------------%
-% Hide unrelevant information %
-%-----------------------------% 
+%------------------------------%
+% Hide irrrelevant information %
+%------------------------------% 
 #show visited/2.
 #show rode/2.
