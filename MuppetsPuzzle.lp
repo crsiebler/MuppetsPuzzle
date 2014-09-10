@@ -50,5 +50,6 @@ park(disney; marine; magic).
 %------------------------------%
 % Hide irrrelevant information %
 %------------------------------% 
+
 #show visited/2.
 #show rode/2.
